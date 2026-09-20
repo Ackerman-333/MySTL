@@ -6,10 +6,14 @@ int main()
 
 MiniVector<int> v;
 
+v.push_back(30);
 v.push_back(10);
 v.push_back(20);
 
-auto it = v.begin();
-std::cout << static_cast<const void*>(it) << '\n';
-std::cout<<it;
+std::sort(v.begin(), v.end());
+
+for (const auto& x : v)
+{
+    std::cout << x << ' ';
+}
 }
